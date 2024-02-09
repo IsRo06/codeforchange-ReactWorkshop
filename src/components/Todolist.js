@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import Button from 'react-bootstrap/Button';
+import party from "party-js";
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import '../App.css';
 import 'react-circular-progressbar/dist/styles.css';
@@ -15,6 +16,8 @@ export default function List() {
   const [task, setTask] = useState('');
   const [list, setList] = useState([]);
   const [full, setFull] = useState(false);
+
+  
   
   //uses useState to add items to the list
   function addToList(){
@@ -53,7 +56,6 @@ export default function List() {
     tot_tasks = 0;
   }, [full])
 
-
   return (
     <>
     
@@ -90,7 +92,7 @@ export default function List() {
         {list.map(item => (
           <div>
               <p class="a" key={item.id}>{item.task}</p>
-              <Button variant="light" size="lg" onClick={() => {setList(list.filter(a =>a.id !== item.id));increaseDone()}} >✔️</Button>
+            <Button variant="light" size="lg" onClick={(e) => {party.confetti(e.target, {size: party.variation.range(0.6, 1.4),});setList(list.filter(a =>a.id !== item.id));increaseDone();}} >✔️</Button>
           </div>
           
         ))}
