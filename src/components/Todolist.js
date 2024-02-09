@@ -57,7 +57,7 @@ export default function List() {
         styles={buildStyles({
             pathColor: "#6A5F9E",
             textColor: '#897BCC',
-            trailColor: '#6A5F9E',
+            trailColor: '#d6d6d6',
             backgroundColor: '#3e98c7',
         })} />
     </div>
