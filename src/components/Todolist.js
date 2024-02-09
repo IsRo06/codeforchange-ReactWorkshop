@@ -64,9 +64,9 @@ export default function List() {
         maxValue={tot_tasks} 
         text={`${percentageDone() }%`}
         styles={buildStyles({
-            pathColor: "#6A5F9E",
-            textColor: '#897BCC',
-            trailColor: '#6A5F9E',
+            pathColor: "#8E7FD4",
+            textColor: '#6A5F9E',
+            trailColor: '#d6d6d6',
             backgroundColor: '#3e98c7',
         })} />
     </div>
@@ -84,8 +84,8 @@ export default function List() {
       <Button type="button" variant="dark" size="lg" onClick={addToList}>Add task</Button>
       
     </div>
-      {
-      //iterates through all items in list and displays them alonsgide a checkmark button
+    {
+      //iterates through all items in list and displays them alonsgide
       }
         {list.map(item => (
           <div>
