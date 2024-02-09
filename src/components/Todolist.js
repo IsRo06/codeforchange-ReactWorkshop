@@ -18,10 +18,7 @@ export default function List() {
   
   //uses useState to add items to the list
   function addToList(){
-    setList([
-        ...list,
-        { id: nextId++, task: task }
-      ]);
+    
     tot_tasks++;  
   }
   //increases the done variable and updates the full variable
@@ -40,17 +37,11 @@ export default function List() {
 
   //triggers useEffect
   function resetTasks(){
-    tot_tasks = 1;
-    setFull(true);
   }
 
   //re renders the website and sets values to 0
   useEffect(()=>{
-    done = 0;
-    nextId=0;
-    setList([]);
-    setFull(false);
-    tot_tasks = 0;
+    
   }, [full])
 
 
@@ -90,7 +81,7 @@ export default function List() {
         {list.map(item => (
           <div>
               <p class="a" key={item.id}>{item.task}</p>
-              <Button variant="light" size="lg" onClick={() => {setList(list.filter(a =>a.id !== item.id));increaseDone()}} >✔️</Button>
+              <Button variant="light" size="lg" onClick={() => {increaseDone()}} >✔️</Button>
           </div>
           
         ))}
