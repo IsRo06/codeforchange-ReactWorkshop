@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import Button from 'react-bootstrap/Button';
+import party from "party-js";
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import '../App.css';
 import 'react-circular-progressbar/dist/styles.css';
@@ -81,7 +82,7 @@ export default function List() {
         {list.map(item => (
           <div>
               <p class="a" key={item.id}>{item.task}</p>
-              <Button variant="light" size="lg" onClick={() => {increaseDone()}} >✔️</Button>
+              <Button variant="light" size="lg" onClick={(e) => {party.confetti(e.target, {size: party.variation.range(0.6, 1.4),});increaseDone()}} >✔️</Button>
           </div>
           
         ))}
