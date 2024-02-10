@@ -18,5 +18,7 @@ You may also see any lint errors in the console.
 
 Simple react based task wheel that utilizes useState() and useEffect to re-render the application and respond to events.
 
+[Informational Slides about React and hooks! ](https://www.canva.com/design/DAF8V4YZ2Ws/DBge37fbI5OvF3Vok_R6rg/edit?utm_content=DAF8V4YZ2Ws&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton). 
+
 
 
